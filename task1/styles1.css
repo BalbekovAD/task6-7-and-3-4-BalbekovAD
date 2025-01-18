@@ -1,0 +1,227 @@
+body {
+    margin: 0;
+}
+
+header {
+    position: relative;
+}
+
+.nav-bar {
+    display: flex;
+}
+
+.nav-option {
+    padding: 16px;
+    transition: color .3s ease;
+}
+
+.nav-dropdown {
+    display: flex;
+    gap: 32px;
+
+    position: absolute;
+    top: 100%;
+    margin: 0 16px 16px;
+    border-radius: 16px;
+    padding: 16px;
+    background: whitesmoke;
+
+    visibility: hidden;
+    opacity: 0;
+    transition: opacity .3s ease, transform .3s ease, visibility .5s ease-in;
+}
+
+input[type="radio"] {
+    display: none;
+}
+
+input[type="checkbox"] {
+    display: none;
+}
+
+.nav-option:has(> input.select:checked) > label.deselect {
+    display: initial;
+}
+
+.nav-option:has(> input.select:checked) > label.select {
+    display: none;
+}
+
+.nav-option:has(> input.select:checked) > label.deselect {
+    display: flex;
+    gap: 8px;
+    align-items: center;
+}
+
+label.select > svg {
+    transform: rotate(180deg);
+}
+
+.nav-option > label.select {
+    display: flex;
+    gap: 8px;
+    align-items: center;
+}
+
+.deselect {
+    display: none;
+}
+
+.nav-option:hover {
+    color: #ff0032;
+}
+
+.nav-option:has(> input.select:checked) {
+    color: #ff0032;
+}
+
+body:has(> header > .nav-bar > .nav-option1 > input.select:checked) .nav-dropdown1,
+body:has(> header > .nav-bar > .nav-option2 > input.select:checked) .nav-dropdown2 {
+    visibility: visible;
+    transform: translateY(16px);
+    opacity: 1;
+}
+
+
+body:has(> header > .nav-bar > .nav-option1 > input.select:checked) .first-indicator {
+    color: #ff0032;
+}
+
+body:has(> header > .nav-bar > .nav-option2 > input.select:checked) .second-indicator {
+    color: #ff0032;
+}
+
+.nav-dropdown > .sub-nav-menu > menu > li {
+    list-style-type: none;
+    padding: 8px 16px;
+    margin: 16px;
+    border-radius: 8px;
+    transition: background-color .2s ease, color .2s ease;
+}
+menu, ul {
+    padding-inline: 0;
+    margin-block: 0;
+}
+
+.sub-nav-menu h2 {
+    text-align: center;
+}
+
+.nav-dropdown > .sub-nav-menu > menu > li:has(> label > input[type="radio"]:checked) {
+    background: #1d2023;
+    color: white;
+}
+
+.sub-nav-content {
+    display: none;
+}
+
+.nav-dropdown:has(.sub-nav1:checked) .sub-nav-content-1 {
+    display: initial;
+}
+
+.nav-dropdown:has(.sub-nav2:checked) .sub-nav-content-2 {
+    display: initial;
+}
+
+.title > label {
+    display: none;
+}
+
+@media (max-width: 950px) {
+    .nav-bar, .nav-dropdown {
+        display: none;
+    }
+    .title > label {
+        display: initial;
+    }
+    header:has(.title input[type="checkbox"]:checked) .mobile-nav-menu {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+.title {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 8px 16px;
+}
+
+.title h1 {
+    margin: 0;
+}
+
+.title svg {
+    background: #1d2023;
+    color: #fafafa;
+    padding: 8px;
+    border-radius: 8px;
+}
+
+.title .active {
+    display: none;
+}
+
+.title:has(input:checked) svg.active {
+    display: initial;
+}
+
+.title:has(input:checked) svg.inactive {
+    display: none;
+}
+
+.mobile-nav-menu {
+    position: absolute;
+    background-color: whitesmoke;
+    padding: 8px 16px;
+    border-radius: 16px;
+    top: 100%;
+    /*right: 0;*/
+    right: 0;
+    /*opacity: 0;*/
+    transform: translateX(100%);
+    transition: transform .3s ease, opacity .3s ease;
+}
+
+.content {
+    padding: 8px;
+}
+
+@media (min-width: 950px) {
+    .mobile-nav-menu {
+        display: none;
+    }
+}
+
+.foldable {
+    transform: scaleY(0);
+    display: none;
+    transition: transform 0.3s;
+    transform-origin: top;
+}
+
+li:has(> label > .expand-trigger:checked) > .foldable {
+    transform: scaleY(1);
+    display: list-item;
+}
+
+body:not(:has(header .title input[type="checkbox"]:checked)) {
+    overflow-x: hidden;
+}
+
+.mobile-nav-menu label:has(.expand-trigger:checked) {
+    color: #ff0032;
+}
+
+.mobile-nav-menu * {
+    list-style-type: none;
+}
+
+.mobile-nav-menu li ul {
+    padding-left: 16px;
+}
+
+.mobile-nav-menu ul > li {
+    margin: 8px 0;
+}

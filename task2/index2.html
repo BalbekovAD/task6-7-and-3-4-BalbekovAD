@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" type="text/css" href="styles2.css"/>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My MTS Drop-Down menu with JS part 1</title>
+</head>
+<body>
+<header>
+    <div class="title">
+        <h1>My MTS Drop-Down menu with JS part 1</h1>
+        <div class="mobile-nav-burger">
+            <svg class="disabled" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                 stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <line x1="4" x2="20" y1="12" y2="12"/>
+                <line x1="4" x2="20" y1="6" y2="6"/>
+                <line x1="4" x2="20" y1="18" y2="18"/>
+            </svg>
+            <svg class="enabled" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                 stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M18 6 6 18"/>
+                <path d="m6 6 12 12"/>
+            </svg>
+        </div>
+    </div>
+    <nav class="nav-bar">
+        <div class="nav-option">
+            Продуктыыыыыыыыыыыыыыыыыыыыыыыыыыыыыыыыыыыыыыыы
+            <svg viewBox="0 0 32 32" fill="currentColor" xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                 class="icon" data-v-0477ba8c="">
+                <path
+                    d="M6.254 12C5.13904 12 4.58067 13.3483 5.36906 14.1368L9.9588 18.7274C12.8067 21.5758 14.2306 23 16 23C17.7694 23 19.1934 21.5758 22.0412 18.7274L26.6309 14.1368C27.4193 13.3483 26.861 12 25.746 12C25.4141 12 25.0958 12.1319 24.861 12.3666L20.2713 16.9572C18.7974 18.4314 17.8662 19.3553 17.0979 19.9416C16.3874 20.4837 16.1174 20.4965 16 20.4965C15.8826 20.4965 15.6126 20.4837 14.9021 19.9416C14.1338 19.3553 13.2026 18.4314 11.7287 16.9572L7.13894 12.3666C6.90425 12.1319 6.58592 12 6.254 12Z"
+                    fill="currentColor"></path>
+            </svg>
+        </div>
+        <div class="nav-option">
+            Профессиональные сервисыыыыыыыыыыыыыыыыыыыыыыыыыы
+            <svg viewBox="0 0 32 32" fill="currentColor" xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                 class="icon" data-v-0477ba8c="">
+                <path
+                    d="M6.254 12C5.13904 12 4.58067 13.3483 5.36906 14.1368L9.9588 18.7274C12.8067 21.5758 14.2306 23 16 23C17.7694 23 19.1934 21.5758 22.0412 18.7274L26.6309 14.1368C27.4193 13.3483 26.861 12 25.746 12C25.4141 12 25.0958 12.1319 24.861 12.3666L20.2713 16.9572C18.7974 18.4314 17.8662 19.3553 17.0979 19.9416C16.3874 20.4837 16.1174 20.4965 16 20.4965C15.8826 20.4965 15.6126 20.4837 14.9021 19.9416C14.1338 19.3553 13.2026 18.4314 11.7287 16.9572L7.13894 12.3666C6.90425 12.1319 6.58592 12 6.254 12Z"
+                    fill="currentColor"></path>
+            </svg>
+        </div>
+    </nav>
+    <div class="nav-dropdown">
+        <div class="sub-nav-menu">
+            <h2>Продукты</h2>
+            <menu>
+                <li class="active">Вычисления и хранение (IaaS)</li>
+                <li>Бизнес-приложения (SaaS)</li>
+            </menu>
+        </div>
+        <div class="sub-nav-contents">
+            <div class="sub-nav-content active">
+                <h3>Вычисления и хранение (IaaS)</h3>
+                <p>111111111111111111111111111111111111111111111111111111111111111111111111</p>
+                <p>111111111111111111111111111111111111111111111111111111111111111111111111</p>
+                <p>111111111111111111111111111111111111111111111111111111111111111111111111</p>
+            </div>
+            <div class="sub-nav-content">
+                <h3>Бизнес-приложения (SaaS)</h3>
+                <p>222222222222222222222222222222222222222222222222222222222222222222222222</p>
+                <p>222222222222222222222222222222222222222222222222222222222222222222222222</p>
+                <p>222222222222222222222222222222222222222222222222222222222222222222222222</p>
+            </div>
+        </div>
+    </div>
+    <div class="nav-dropdown">
+        <div class="sub-nav-menu">
+            <h2>Профессиональные сервисы</h2>
+            <menu>
+                <li class="active">Консалтинг и проектные услуги</li>
+                <li>Профессиональные сервисы и аутсорсинг</li>
+            </menu>
+        </div>
+        <div class="sub-nav-contents">
+            <div class="sub-nav-content active">
+                <h3>Консалтинг и проектные услуги</h3>
+                <p>111111111111111111111111111111111111111111111111111111111111111111111111</p>
+                <p>111111111111111111111111111111111111111111111111111111111111111111111111</p>
+                <p>111111111111111111111111111111111111111111111111111111111111111111111111</p>
+            </div>
+            <div class="sub-nav-content">
+                <h3>Профессиональные сервисы и аутсорсинг</h3>
+                <p>222222222222222222222222222222222222222222222222222222222222222222222222</p>
+                <p>222222222222222222222222222222222222222222222222222222222222222222222222</p>
+                <p>222222222222222222222222222222222222222222222222222222222222222222222222</p>
+            </div>
+        </div>
+    </div>
+    <div class="mobile-nav-menu">
+        <ul>
+            <li>
+                <h2 class="selectable">Продукты</h2>
+                <ul class="foldable">
+                    <li>
+                        <h3 class="selectable">Вычисления и хранение (IaaS)</h3>
+                        <p class="foldable">11111111111111111111111111</p>
+                    </li>
+                    <li>
+                        <h3 class="selectable">Бизнес-приложения (SaaS)</h3>
+                        <p class="foldable">22222222222222222222222222</p>
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <h2 class="selectable">Профессиональные сервисы</h2>
+                <ul class="foldable">
+                    <li>
+                        <h3 class="selectable">Консалтинг и проектные услуги</h3>
+                        <p class="foldable">11111111111111111111111111</p>
+                    </li>
+                    <li>
+                        <h3 class="selectable">Профессиональные сервисы и аутсорсинг</h3>
+                        <p class="foldable">22222222222222222222222222</p>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+</header>
+<div class="content">
+    <h2>Indicators</h2>
+    <div class="first-indicator">Если я красный то выделен первый пункт меню</div>
+    <div class="second-indicator">Если я красный то выделен второй пункт меню</div>
+</div>
+</body>
+<script src="index2.js"></script>
+</html>
